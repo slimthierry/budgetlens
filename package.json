@@ -1,0 +1,23 @@
+{
+  "name": "budgetlens",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BudgetLens - Suivi financier intelligent",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean",
+    "dev:web": "turbo run dev --filter=@budgetlens/web",
+    "build:web": "turbo run build --filter=@budgetlens/web"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.0",
+    "typescript": "^5.7.0"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

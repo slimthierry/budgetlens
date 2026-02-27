@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+.eggs/
+venv/
+.venv/
+env/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+coverage/
+htmlcov/
+.pytest_cache/
+.coverage
+.coverage.*
+
+# Docker
+*.log
+
+# Turborepo
+.turbo/
+
+# Alembic
+alembic/versions/*.pyc
+
+# Misc
+*.bak
+*.tmp
+.cache/

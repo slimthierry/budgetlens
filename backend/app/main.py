@@ -7,9 +7,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.config.settings import settings
 from app.config.database import engine, Base
-from app.api.v1 import auth, accounts, transactions, budgets, savings, dashboard
-
-
+from app.loggers import setup_logging
+from app.routes import app_router
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Application lifespan: startup and shutdown events."""
@@ -17,8 +16,6 @@ async def lifespan(app: FastAPI):
         await conn.run_sync(Base.metadata.create_all)
     yield
     await engine.dispose()
-
-
 app = FastAPI(
     title="BudgetLens API",
     description="API pour le suivi financier intelligent BudgetLens",
@@ -42,8 +39,6 @@ app.include_router(transactions.router, prefix="/api/v1/transactions", tags=["Tr
 app.include_router(budgets.router, prefix="/api/v1/budgets", tags=["Budgets"])
 app.include_router(savings.router, prefix="/api/v1/savings", tags=["Savings Goals"])
 app.include_router(dashboard.router, prefix="/api/v1/dashboard", tags=["Dashboard"])
-
-
 @app.get("/api/health", tags=["Health"])
 async def health_check():
     """Health check endpoint."""

@@ -3,8 +3,8 @@
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.security import get_password_hash, verify_password, create_access_token, create_refresh_token, decode_token
-from app.core.exceptions import BadRequestError, NotFoundError
+from app.auth.security import get_password_hash, verify_password, create_access_token, create_refresh_token, decode_token
+from app.auth.exceptions import BadRequestError, NotFoundError
 from app.models.user_models import User
 from app.schemas.auth_schemas import RegisterRequest, LoginRequest, TokenResponse
 

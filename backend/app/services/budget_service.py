@@ -5,7 +5,7 @@ from datetime import date
 from sqlalchemy import select, func, and_
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.exceptions import NotFoundError, ForbiddenError
+from app.auth.exceptions import NotFoundError, ForbiddenError
 from app.models.account_models import Account
 from app.models.budget_models import Budget
 from app.models.transaction_models import Transaction, TransactionType

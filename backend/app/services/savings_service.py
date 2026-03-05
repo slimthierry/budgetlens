@@ -3,7 +3,7 @@
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.exceptions import NotFoundError, ForbiddenError, BadRequestError
+from app.auth.exceptions import NotFoundError, ForbiddenError, BadRequestError
 from app.models.budget_models import SavingsGoal
 from app.models.user_models import User
 from app.schemas.budget_schemas import SavingsGoalCreate, SavingsGoalUpdate, SavingsGoalResponse

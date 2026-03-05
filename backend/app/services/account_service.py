@@ -3,7 +3,7 @@
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.exceptions import NotFoundError, ForbiddenError
+from app.auth.exceptions import NotFoundError, ForbiddenError
 from app.models.account_models import Account
 from app.models.user_models import User
 from app.schemas.account_schemas import AccountCreate, AccountUpdate
